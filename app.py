@@ -14,14 +14,14 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 import streamlit as st
-from llm_chains import load_normal_chain, load_pdf_chat_chain
+from src.llm_chains import load_normal_chain, load_pdf_chat_chain
 from streamlit_mic_recorder import mic_recorder
-from utils import get_timestamp, load_config, get_avatar
-from image_handler import handle_image
-from audio_handler import transcribe_audio
-from pdf_handler import add_documents_to_db
-from html_templates import css
-from database_operations import load_last_k_text_messages, save_text_message, save_image_message, save_audio_message, load_messages, get_all_chat_history_ids, delete_chat_history
+from src.utils import get_timestamp, load_config, get_avatar
+from src.image_handler import handle_image
+from src.audio_handler import transcribe_audio
+from src.pdf_handler import add_documents_to_db
+from src.html_templates import css
+from src.database_operations import load_last_k_text_messages, save_text_message, save_image_message, save_audio_message, load_messages, get_all_chat_history_ids, delete_chat_history
 import sqlite3
 
 config = load_config()

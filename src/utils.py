@@ -4,7 +4,7 @@ from datetime import datetime
 import yaml
 
 def load_config():
-    with open("config.yaml", "r") as f:
+    with open("../config.yaml", "r") as f:
         return yaml.safe_load(f)
     
 def save_chat_history_json(chat_history, file_path):
@@ -23,6 +23,6 @@ def get_timestamp():
 
 def get_avatar(sender_type):
     if sender_type == "human":
-        return "chat_icons/Fox_user.png"
+        return "chat_icons/user_image.png"
     else:
-       return "chat_icons/AI_bot_logo.png"
+       return "chat_icons/bot_image.png"
